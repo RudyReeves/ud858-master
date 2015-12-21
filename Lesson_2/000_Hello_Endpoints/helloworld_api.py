@@ -46,7 +46,7 @@ class HelloWorldApi(remote.Service):
     @endpoints.method(REQUEST_CONTAINER, Hello,
       path = "greetByPeriod", http_method='GET', name = "greetByPeriod")
     def say_hello_by_period(self, request):
-      greet = "%s, %s" % (request.period, request.name)
+      greet = "Good %s, %s" % (request.period, request.name)
       print greet
       return Hello(greeting=greet)
 
